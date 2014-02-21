@@ -29,20 +29,20 @@ class SiswaAdmin(admin.ModelAdmin):
 
     fieldsets = [
         (None, {
-            'classes': ('suit-tab suit-tab-guru',),
+            'classes': ('suit-tab suit-tab-siswa',),
             'fields': ['nis', 'kelas', 'aktif']
         }),
         ('Biodata', {
-            'classes': ('suit-tab suit-tab-guru',),
+            'classes': ('suit-tab suit-tab-siswa',),
             'fields': ['nama', 'jenis_kelamin', 'agama', 'tanggal_lahir']
         }),
         ('Kontak', {
-            'classes': ('suit-tab suit-tab-guru',),
+            'classes': ('suit-tab suit-tab-siswa',),
             'fields': ['alamat', 'email', 'nomor_telepon']
         })
     ]
 
-    suit_form_tabs = (('guru', 'Guru'),)
+    suit_form_tabs = (('siswa', 'Siswa'),)
 
 
 class MataPelajaranAdmin(admin.ModelAdmin):
