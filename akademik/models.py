@@ -57,6 +57,18 @@ class Guru(Biodata):
         verbose_name_plural = 'guru'
 
 
+class MataPelajaran(models.Model):
+    nama = models.CharField(max_length=100, unique=True)
+    jurusan = models.ManyToManyField(Jurusan, verbose_name='diajarkan pada')
+    pengajar = models.ManyToManyField(Guru)
+
+    class Meta:
+        verbose_name_plural = 'mata pelajaran'
+
+    def __unicode__(self):
+        return self.nama
+
+
 class Kelas(models.Model):
     jurusan = models.ForeignKey(Jurusan)
     wali = models.ForeignKey(Guru)
@@ -77,31 +89,10 @@ class Siswa(Biodata):
         verbose_name_plural = 'siswa'
 
 
-class MataPelajaran(models.Model):
-    jurusan = models.ManyToManyField(Jurusan, verbose_name='diajarkan pada')
-    nama = models.CharField(max_length=100, unique=True)
-
-    class Meta:
-        verbose_name_plural = 'mata pelajaran'
-
-    def __unicode__(self):
-        return self.nama
-
-
-class Pengajaran(models.Model):
+class Jadwal(models.Model):
     mata_pelajaran = models.ForeignKey(MataPelajaran)
     kelas = models.ForeignKey(Kelas)
     pengajar = models.ForeignKey(Guru)
-
-    class Meta:
-        verbose_name_plural = 'pengajaran'
-
-    def __unicode__(self):
-        return '%s' % (self.mata_pelajaran,)
-
-
-class Jadwal(models.Model):
-    pengajaran = models.ForeignKey(Pengajaran)
     hari = models.SmallIntegerField(choices=HARI)
     mulai = models.TimeField()
     selesai = models.TimeField()

@@ -32,7 +32,9 @@ Beberapa pengetahuan dasar yang dibutuhkan untuk mengembangkan Aplikasi Web berb
 
 1. Django 1.6.2  
    `pip install Django==1.6.2`
-2. Django Suit  
+2. South  
+   `pip install South==0.8.1`       
+3. Django Suit  
    `pip install django-suit==0.2.5`
 
 **Install SIA**
@@ -58,15 +60,14 @@ Beberapa pengetahuan dasar yang dibutuhkan untuk mengembangkan Aplikasi Web berb
 2. Guru
 3. Pelajaran
 4. Kelas
-5. Pengajaran
-6. Jadwal
-7. Jurusan
-8. Jenis Agenda
-9. Kalender Akademik
+5. Jadwal
+6. Jurusan
+7. Jenis Agenda
+8. Kalender Akademik
 
 ##### ERD
 `draft version`
-![image](https://dl.dropboxusercontent.com/u/83059892/SIA/ERD-SIA.png)
+![image](https://dl.dropboxusercontent.com/u/83059892/SIA/SIA-ERD.png)
 
 [Unduh ERD](https://dl.dropboxusercontent.com/u/83059892/SIA/SIA-ERD.vdx) *(format: Microsoft Visio)*
 
