@@ -27,25 +27,36 @@ Beberapa pengetahuan dasar yang dibutuhkan untuk mengembangkan Aplikasi Web berb
 
 # Menginstall SIA
 ---
-### Lingkungan Development
+### Lingkungan Development/Packages
 **Requirement**
 
 1. Django 1.6.2  
-   `pip install Django==1.6.2`
+   
 2. South  
-   `pip install South==0.8.1`       
+          
 3. Django Suit  
-   `pip install django-suit==0.2.5`
 
-**Install SIA**
+4. Psycopg2
+   
+
+
+
+# Install SIA ke localhost
+---
+
+**Copy Source Code**
 
 `git clone https://github.com/django-developer-indonesia/sia.git`
+
+**Install packages yang dibutuhkan**
+
+`pip install -r requirements.txt`
 
 **Setup**
 
 `./manage.py syncdb`
 
-**Menjalankan SIA**
+**Menjalankan SIA di localhost**
 
 `./manage.py runserver`
 
@@ -72,3 +83,4 @@ Beberapa pengetahuan dasar yang dibutuhkan untuk mengembangkan Aplikasi Web berb
 [Unduh ERD](https://dl.dropboxusercontent.com/u/83059892/SIA/SIA-ERD.vdx) *(format: Microsoft Visio)*
 
 [Refensi Simbol ERD](https://dl.dropboxusercontent.com/u/83059892/SIA/referensi-membaca-ERD.png)
+
